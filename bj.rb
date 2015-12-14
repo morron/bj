@@ -11,8 +11,13 @@ def start
   player = Player.new
   dealer = Dealer.new
 
-  2.times { dealer.push(deck.pop) }
+  p 'Let\'s Game begin'
+  p '-------------------------'
+  
   2.times { player.push(deck.pop) }
+
+  2.times { dealer.push(deck.pop) }
+
 end
 
 if __FILE__ == $0

@@ -1,5 +1,9 @@
-module Hand
+class Hand
   attr_reader :cards
+
+  def initialize
+    @cards = []
+  end
 
   def push(card)
     @cards << card
