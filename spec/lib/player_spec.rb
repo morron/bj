@@ -29,7 +29,7 @@ RSpec.describe Player do
 
   context '#setup_bet' do
     it do
-      allow(subject).to receive(:gets).and_return('100')
+      allow(subject).to receive(:ask).and_return(100)
       expect { subject.setup_bet }.to change { subject.money }
         .from(subject.money).to(subject.money - 100)
     end

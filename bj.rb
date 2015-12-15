@@ -1,10 +1,11 @@
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 
 require 'pry'
+require 'highline/import'
 require 'Dealer'
 
 def start
-  puts "Hello!\n"
+  say 'Hello!'
   dealer = Dealer.new
   dealer.new_game
 

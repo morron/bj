@@ -17,6 +17,10 @@ class Hand
     score == 21
   end
 
+  def size
+    @cards.size
+  end
+
   def to_s
     s = "cards: #{@cards.join(', ')}\n"
     s + "score: #{score}"
