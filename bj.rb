@@ -1,20 +1,14 @@
-$LOAD_PATH.unshift File.dirname(__FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 
 require 'pry'
-require 'classes/Deck'
-require 'classes/Dealer'
-require 'classes/Player'
+require 'Dealer'
 
 def start
-  p 'Hello!'
-  deck = Deck.new
-  player = Player.new
+  puts "Hello!\n"
   dealer = Dealer.new
+  dealer.new_game
 
-  p 'Let\'s Game begin'
-  p '-------------------------'
-  2.times { player.push(deck.pop) }
-  2.times { dealer.push(deck.pop) }
+  binding.pry
 end
 
 start if __FILE__ == $PROGRAM_NAME

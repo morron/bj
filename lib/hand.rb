@@ -16,4 +16,9 @@ class Hand
   def blackjack?
     score == 21
   end
+
+  def to_s
+    s = "cards: #{@cards.join(', ')}\n"
+    s + "score: #{score}"
+  end
 end
