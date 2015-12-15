@@ -3,7 +3,6 @@ $LOAD_PATH.unshift File.dirname(__FILE__)
 require 'Hand'
 
 class Player
-  include Hand
   attr_reader :money, :hand
 
   def initialize(money = 1000)

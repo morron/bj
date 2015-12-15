@@ -13,13 +13,8 @@ def start
 
   p 'Let\'s Game begin'
   p '-------------------------'
-  
   2.times { player.push(deck.pop) }
-
   2.times { dealer.push(deck.pop) }
-
 end
 
-if __FILE__ == $0
-    start
-end
+start if __FILE__ == $PROGRAM_NAME
