@@ -10,7 +10,7 @@ class Hand
   end
 
   def score
-    @value ||= @cards.map(&:value).inject(:+)
+    @cards.map(&:value).inject(:+)
   end
 
   def blackjack?
@@ -19,6 +19,10 @@ class Hand
 
   def size
     @cards.size
+  end
+
+  def reset
+    @cards = []
   end
 
   def to_s
