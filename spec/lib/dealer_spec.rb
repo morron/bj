@@ -1,6 +1,7 @@
 RSpec.describe Dealer do
   subject { described_class.new }
 
-  context '' do
+  context '#game_result' do
+    
   end
 end
