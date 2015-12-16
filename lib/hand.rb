@@ -17,6 +17,10 @@ class Hand
     score == 21
   end
 
+  def bust?
+    score > 21
+  end
+
   def size
     @cards.size
   end

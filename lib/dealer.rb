@@ -45,6 +45,8 @@ class Dealer
     deal_to(@player, 2)
     deal_to(self, 2)
 
+    show_self_card
+
     round until @game_over
     if @game_over
       deal_to(self) until @hand.score > 17
@@ -68,11 +70,17 @@ class Dealer
          "#{player.hand}\n\n"
   end
 
+  def show_self_card
+    say "\n#{self}'s hand:\n" \
+         "------------------\n" \
+         "#{player.hand.cards[1]}\n\n"
+  end
+
   def game_result
     show_hand(@player)
     show_hand(self)
 
-    if @player.hand.score < @hand.score || @player.hand.score > 21
+    if @player.hand.score < @hand.score || @player.hand.bust?
       say "#{player} lose game. sry."
     elsif @player.hand.score > @hand.score || @player.hand.blackjack?
       @player.money += @player.bet * 1.5
