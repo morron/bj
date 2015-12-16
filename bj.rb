@@ -1,8 +1,5 @@
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
-
-require 'pry'
 require 'highline/import'
-require 'Dealer'
+require 'lib/blackjack'
 
 def start
   say 'Hello!'

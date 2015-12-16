@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'Player'
-
 RSpec.describe Player do
   subject { described_class.new(name) }
   let(:name) { 'SlimShady' }

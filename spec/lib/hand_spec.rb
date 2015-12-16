@@ -1,7 +1,3 @@
-require 'spec_helper'
-require 'Hand'
-require 'Card'
-
 RSpec.describe Hand do
   subject { described_class.new }
   let(:card_1) { Card.new(:hearts, 'K') }

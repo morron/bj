@@ -1,9 +1,3 @@
-$LOAD_PATH.unshift File.dirname(__FILE__)
-
-require 'Deck'
-require 'Hand'
-require 'Player'
-
 class Dealer
   attr_reader :hand, :player
 

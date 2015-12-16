@@ -1,7 +1,3 @@
-$LOAD_PATH.unshift File.dirname(__FILE__)
-
-require 'Card'
-
 class Deck
   SUITS = [:spades, :hearts, :diams, :clubs]
   FACES = [*2..10] | %w(J Q K A)

@@ -1,7 +1,3 @@
-$LOAD_PATH.unshift File.dirname(__FILE__)
-
-require 'Hand'
-
 class Player
   attr_reader :name, :hand, :bet
   attr_accessor :money

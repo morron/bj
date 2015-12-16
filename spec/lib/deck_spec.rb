@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'Deck'
-
 RSpec.describe Deck do
   subject { described_class.new }
 
