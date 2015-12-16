@@ -4,7 +4,7 @@ require 'Card'
 
 class Deck
   SUITS = [:spades, :hearts, :diams, :clubs]
-  FACES = (2..10).to_a | %w(J Q K A)
+  FACES = [*2..10] | %w(J Q K A)
 
   attr_accessor :cards
 

@@ -17,6 +17,7 @@ class Dealer
 
   def round
     show_hand(@player)
+    @game_over = true if @player.hand.score > 21 || @player.hand.blackjack?
     choose do |move|
       move.prompt = 'You move?  '
       move.choice(:hit) do
@@ -30,7 +31,6 @@ class Dealer
         @game_over = true
       end
     end
-    @game_over = true if @player.hand.score > 21 || @player.hand.blackjack?
   end
 
   def new_game
