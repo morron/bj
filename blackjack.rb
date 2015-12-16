@@ -1,5 +1,8 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require_relative 'lib/blackjack'
 require 'highline/import'
-require 'lib/blackjack'
 
 def start
   say 'Hello!'
