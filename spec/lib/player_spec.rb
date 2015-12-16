@@ -19,18 +19,18 @@ RSpec.describe Player do
     it { expect(subject.name).to eq(name) }
   end
 
-  context '#bet' do
+  context '#bet_up_to' do
     it do
-      expect { subject.bet 20 }.to change { subject.money }
+      expect { subject.bet_up_to 20 }.to change { subject.money }
         .from(subject.money)
         .to(subject.money - 20)
     end
   end
 
-  context '#setup_bet' do
+  context '#set_bet_on' do
     it do
       allow(subject).to receive(:ask).and_return(100)
-      expect { subject.setup_bet }.to change { subject.money }
+      expect { subject.set_bet_on }.to change { subject.money }
         .from(subject.money).to(subject.money - 100)
     end
   end

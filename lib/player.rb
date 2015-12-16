@@ -24,8 +24,11 @@ class Player
 
   def set_bet_on(limit = @money)
     bet = 0
+    choices = %w(10 20 50 100)
+    say "How much would you like to bet on? You can bet up to $#{limit}"
+    say choices.map { |c| "#{c}\n" }.join
     loop do
-      bet = ask "How much would you like to bet on? You can bet up to $#{limit}", Integer
+      bet = ask('> ', choices).to_i
       break if bet > 0 && bet <= limit
       say "Sorry, invalid bet amount. You can bet up to $#{limit}"
     end

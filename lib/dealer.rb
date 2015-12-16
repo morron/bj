@@ -52,7 +52,7 @@ class Dealer
 
       choose do |move|
         move.prompt = 'New game? '
-        move.choice(:new) { new_game }
+        move.choice(:'new game') { new_game }
         move.choice(:exit) { return }
       end
     end
